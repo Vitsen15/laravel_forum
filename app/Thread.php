@@ -13,4 +13,9 @@ class Thread extends Model
     {
         return route('thread', $this->id);
     }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }
